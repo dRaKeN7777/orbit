@@ -1,0 +1,24 @@
+{
+  "name": "orbit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Account-based social listening + thought-leadership engine for inbound cybersecurity lead-gen (UK/CH).",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node src/server.mjs & node src/frontend.mjs",
+    "worker": "node src/worker.mjs",
+    "pipeline": "node src/cli.mjs pipeline",
+    "ingest": "node src/cli.mjs ingest",
+    "topics": "node src/cli.mjs topics",
+    "publish": "node src/cli.mjs publish",
+    "seed": "node src/cli.mjs seed",
+    "selftest": "node src/selftest.mjs",
+    "smoke": "node src/smoke.mjs",
+    "frontend": "node src/frontend.mjs"
+  },
+  "dependencies": {}
+}

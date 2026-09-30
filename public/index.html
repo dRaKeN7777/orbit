@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>Orbit — Executive Radar</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+        <ellipse cx="12" cy="12" rx="10" ry="4.6" transform="rotate(-28 12 12)"></ellipse>
+        <circle cx="12" cy="12" r="3.1" fill="currentColor" stroke="none"></circle>
+        <circle cx="20.1" cy="8.7" r="1.5" fill="currentColor" stroke="none"></circle>
+      </svg>
+      <span class="brand-name">Orbit</span>
+    </div>
+
+    <nav class="nav" id="nav" aria-label="Views">
+      <a class="nav-item" href="#radar" data-view="radar" title="Executive Radar" aria-label="Executive Radar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <circle cx="12" cy="12" r="4.6"></circle>
+          <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"></circle>
+          <path d="M12 12l6.4-4.2"></path>
+        </svg>
+        <span class="nav-label">Radar</span>
+      </a>
+      <a class="nav-item" href="#topics" data-view="topics" title="Topic &amp; Pain-Point Matrix" aria-label="Topics">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7.5" height="7.5" rx="1.6"></rect>
+          <rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"></rect>
+          <rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"></rect>
+          <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6"></rect>
+        </svg>
+        <span class="nav-label">Topics</span>
+      </a>
+      <a class="nav-item" href="#studio" data-view="studio" title="Content &amp; Comment Studio" aria-label="Studio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 20h4.2L19 9.2a2.4 2.4 0 0 0 0-3.4l-.8-.8a2.4 2.4 0 0 0-3.4 0L4 15.8V20z"></path>
+          <path d="M13.6 6.6l3.8 3.8"></path>
+        </svg>
+        <span class="nav-label">Studio</span>
+      </a>
+      <a class="nav-item" href="#scheduler" data-view="scheduler" title="Scheduler &amp; Inbound Tracker" aria-label="Scheduler">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="16" rx="2.2"></rect>
+          <path d="M3 10h18M8 3v4M16 3v4"></path>
+          <path d="M7.5 14h3v3h-3z" fill="currentColor" stroke="none"></path>
+        </svg>
+        <span class="nav-label">Scheduler</span>
+      </a>
+      <a class="nav-item" href="#website" data-view="website" title="Website Updates" aria-label="Website">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3.2 12h17.6"></path>
+          <path d="M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"></path>
+        </svg>
+        <span class="nav-label">Website</span>
+      </a>
+      <a class="nav-item" href="#runs" data-view="runs" title="Runs, Automation &amp; Settings" aria-label="Runs">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="16" rx="2.2"></rect>
+          <path d="M7 9.5l3 2.8-3 2.8M12.6 15.6h4.4"></path>
+        </svg>
+        <span class="nav-label">Runs</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="foot-line foot-user" id="foot-user" hidden>
+        <span class="foot-user-name" id="foot-user-name">—</span>
+        <button type="button" class="btn btn-xs btn-ghost" id="signout" title="Sign out">Sign out</button>
+      </div>
+      <div class="foot-line"><span class="mono" id="health-version">v—</span></div>
+      <div class="foot-line"><span class="foot-muted" id="foot-mode">local only</span></div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="topbar-left">
+        <span class="app-name">Orbit</span>
+        <span class="crumb" aria-hidden="true">/</span>
+        <h1 class="view-title" id="view-title">Executive Radar</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="counters" id="counters" aria-label="Pipeline counters"></div>
+        <div class="status" id="status" title="API health">
+          <span class="dot dot-idle" id="status-dot"></span>
+          <span class="status-text" id="status-text">connecting</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+
+    <section class="console" id="console" aria-label="Activity console">
+      <div class="console-head">
+        <button type="button" class="console-toggle" id="console-toggle" aria-expanded="true" aria-controls="console-body">
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+          <span>Activity</span>
+        </button>
+        <span class="console-meta mono" id="console-meta">no events yet</span>
+        <span class="spacer"></span>
+        <span class="console-meta" id="stream-mode">live</span>
+        <button type="button" class="btn btn-xs btn-ghost" id="console-clear">Clear</button>
+      </div>
+      <div class="console-body mono" id="console-body"></div>
+    </section>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">Orbit needs JavaScript enabled.</p></noscript>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

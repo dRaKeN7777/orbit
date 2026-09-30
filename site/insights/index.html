@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insights — CyberPresalesOS</title>
+<meta name="theme-color" content="#004530" />
+<link rel="icon" href="../assets/logo.jpg" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .insights { padding: 150px 0 110px; }
+  .insight-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+  .insight-card { display: block; padding: 28px 26px; background: #fff; border: 1px solid var(--line);
+    border-radius: var(--r); transition: transform .3s var(--ease), box-shadow .3s, border-color .3s; }
+  .insight-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: rgba(0,69,48,.24); }
+  .insight-card h3 { font-size: 1.16rem; margin-bottom: 10px; color: var(--green); }
+  .insight-card p { color: var(--muted); font-size: .95rem; }
+  @media (max-width: 760px) { .insight-list { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav stuck">
+  <div class="wrap nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo.jpg" alt="" width="34" height="34" />
+      <span class="brand-text">Enhancing<b>Security</b></span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#product">Product</a>
+      <a href="../index.html#how">How it works</a>
+      <a href="index.html">Insights</a>
+      <a href="../index.html#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta"><a class="btn btn-solid" href="../index.html#cta">Request access</a></div>
+  </div>
+</header>
+
+<main class="insights">
+  <div class="wrap">
+    <p class="kicker">Insights</p>
+    <h2>Notes from the presales floor.</h2>
+    <p class="lede dark narrow-p">Written from the clusters of conversation our market watch surfaces each week.</p>
+    <div class="insight-list">
+      <a class="insight-card" href="estimation-effort-and-margin-what-a-repeatable-presales-process-has-to.html">
+        <h3>Estimation, effort and margin: what a repeatable presales process has to prove</h3>
+        <p>Where Estimation, effort and margin stops being a people problem and becomes a records problem.</p>
+      </a>
+      <a class="insight-card" href="estimation-effort-and-margin-what-a-repeatable-presales-process-has-to.html">
+        <h3>Estimation, effort and margin: what a repeatable presales process has to prove</h3>
+        <p>Where Estimation, effort and margin stops being a people problem and becomes a records problem.</p>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-base" style="margin-top:0;border-top:0">
+    <p>© 2026 Enhancing Security · enhancingprofit.com</p>
+    <p><a href="../index.html">Home</a></p>
+  </div>
+</footer>
+</body>
+</html>
